@@ -15,5 +15,8 @@
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
+  },
+  "scripts": {
+    "cs": "git --no-pager diff --name-only --diff-filter=ACM HEAD -- | grep .php | xargs -n1 tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --diff --using-cache=no --allow-risky=yes"
   }
 }

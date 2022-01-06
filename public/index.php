@@ -1,6 +1,8 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+declare(strict_types=1);
+
+require __DIR__.'/../vendor/autoload.php';
 
 $app = new FrameworkX\App();
 
@@ -16,7 +18,7 @@ $app->get('/users/{name}', function (Psr\Http\Message\ServerRequestInterface $re
     return new React\Http\Message\Response(
         200,
         [],
-        "Hello " . $request->getAttribute('name') . "!\n"
+        'Hello '.$request->getAttribute('name')."!\n"
     );
 });
 
