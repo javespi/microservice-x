@@ -9,3 +9,11 @@ It could be used as skeleton for microservices. Clone the repository and run the
 2. Run `composer install`
 3. Run built-in web server: `php public/index.php`
 4. Go to http://localhost:8080
+
+### Run tests
+
+For running test suite, just run from root directory:
+
+```
+composer test
+```

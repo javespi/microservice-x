@@ -16,7 +16,14 @@
   "require-dev": {
     "roave/security-advisories": "dev-latest"
   },
+  "autoload": {
+    "Microservice/": "src/"
+  },
+  "autoload-dev": {
+    "Tests/Microservice/": "tests/"
+  },
   "scripts": {
-    "cs": "git --no-pager diff --name-only --diff-filter=ACM HEAD -- | grep .php | xargs -n1 tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --diff --using-cache=no --allow-risky=yes"
+    "cs": "git --no-pager diff --name-only --diff-filter=ACM HEAD -- | grep .php | xargs -n1 tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --diff --using-cache=no --allow-risky=yes",
+    "test": "tools/phpunit/vendor/bin/phpunit tests/"
   }
 }
