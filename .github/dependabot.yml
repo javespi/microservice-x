@@ -9,3 +9,21 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+  - package-ecosystem: "composer"
+    directory: "/tools/php-cs-fixer"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: "composer"
+    directory: "/tools/phpunit"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
